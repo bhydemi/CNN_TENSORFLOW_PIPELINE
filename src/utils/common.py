@@ -16,7 +16,6 @@ def create_directories(path_to_directories: list):
         os.makedirs(path, exist_ok=True)
         logging.info(f"created directory at: {path}")
 
-
 def save_json(path: str, data: dict):
     with open(path, "w") as f:
         json.dump(data, f, indent=4)
