@@ -1,5 +1,5 @@
 # dvc-project-template
-DVC project template
+DVC project using Tensorflow
 
 ## STEPS -
 
