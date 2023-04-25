@@ -3,7 +3,13 @@ import os
 import shutil
 from tqdm import tqdm
 import logging
-from src.utils.common import read_yaml, create_directories
+
+import sys
+
+sys.path.append("/path/to/src")
+
+import src.utils.common_utils as utils
+#from src.utils.common_utils import create_directories, read_yaml
 import random
 
 
@@ -18,10 +24,10 @@ logging.basicConfig(
 
 
 def get_data(config_path):
-    config = read_yaml(config_path)
+    config = utils.read_yaml(config_path)
     remote_data_path = config["data_source"]
     local_data_path = config["data_local"]
-    create_directories([local_data_path])
+    utils.create_directories([local_data_path])
     for data_dir in tqdm(os.listdir(remote_data_path), colour="green"):
         data_dir_path = os.path.join(remote_data_path, data_dir)
         if os.path.isdir(data_dir_path):
@@ -40,7 +46,7 @@ if __name__ == '__main__':
     try:
         logging.info("\n********************")
         logging.info(f">>>>> stage {STAGE} started <<<<<")
-        get_data(config_path=parsed_args.config, params_path=parsed_args.params)
+        get_data(config_path=parsed_args.config)
         logging.info(f">>>>> stage {STAGE} completed!<<<<<\n")
     except Exception as e:
         logging.exception(e)
