@@ -1,0 +1,63 @@
+schema: '2.0'
+stages:
+  stage_01_get_data:
+    cmd: python src/stage_01_get_data.py --config_path=configs/config.yaml
+    deps:
+    - path: configs/config.yaml
+      md5: 3c9330618be81f6f9a60f2a0ac1ffaf5
+      size: 1226
+    - path: src/stage_01_get_data.py
+      md5: e858ccb707c2cc3fb2f6b613d98284a9
+      size: 1519
+    - path: src/utils/common_utils.py
+      md5: 779a6f708e3d962ef74cd5b6372988cb
+      size: 1009
+    outs:
+    - path: data/ants
+      md5: fd6d4daa6c9d799cbb913bab12cf7c30.dir
+      size: 9280504
+      nfiles: 499
+    - path: data/bees
+      md5: 5b658d2496fa2963f49787e945b5ed6e.dir
+      size: 8939904
+      nfiles: 500
+    - path: data/beetle
+      md5: 5566becd013e0fe1728ea11486cf5bf8.dir
+      size: 7802570
+      nfiles: 416
+    - path: data/catterpillar
+      md5: bee99d6919cff3c6f99e9d7be6cc6a08.dir
+      size: 8225230
+      nfiles: 434
+    - path: data/earthworms
+      md5: ce3107beadf3443d37c2b86131940974.dir
+      size: 8464623
+      nfiles: 323
+    - path: data/earwig
+      md5: 91e915bba720dbeb4617cb3544cca765.dir
+      size: 8671858
+      nfiles: 466
+    - path: data/grasshopper
+      md5: 29df923f0293c789824926ad6026e5d2.dir
+      size: 8459531
+      nfiles: 485
+    - path: data/moth
+      md5: 844c8fdbe33091d61ec9fedc86610a0c.dir
+      size: 10416018
+      nfiles: 497
+    - path: data/slug
+      md5: 0beca3596f016e46e75aa171947f28aa.dir
+      size: 9437785
+      nfiles: 391
+    - path: data/snail
+      md5: 2d95f4715c783b62503a6868099da6c7.dir
+      size: 10439375
+      nfiles: 500
+    - path: data/wasp
+      md5: abfbca20a21bc0f047d3847eaa7a4d86.dir
+      size: 8726265
+      nfiles: 498
+    - path: data/weevil
+      md5: 1fa3db3ff240c013451d330763827bfb.dir
+      size: 8549837
+      nfiles: 485
