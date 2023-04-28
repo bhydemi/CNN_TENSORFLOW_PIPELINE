@@ -10,10 +10,31 @@ artifacts:
   TENSORBOARD_ROOT_LOG_DIR: tensorboard_log_dir
   CALLBACKS_DIR: callbacks
 
-source_download_dirs:
-  - ../outside_data/cat
-  - ../outside_data/dog
+source_download_dirs: 
+ - ../dataset/ants
+ - ../dataset/beetle
+ - ../dataset/bees
+ - ../dataset/catterpillar
+ - ../dataset/earthworms
+ - ../dataset/earwig
+ - ../dataset/grasshopper
+ - ../dataset/slug
+ - ../dataset/moth
+ - ../dataset/snail
+ - ../dataset/wasp
+ - ../dataset/weevil
 
-local_data_dirs:
-  - data/cat
-  - data/dog
+
+local_data_dirs: 
+  - ../CNN_TENSORFLOW_PIPELINE/data/ants
+  - ../CNN_TENSORFLOW_PIPELINE/data/beetle
+  - ../CNN_TENSORFLOW_PIPELINE/data/bees
+  - ../CNN_TENSORFLOW_PIPELINE/data/catterpillar
+  - ../CNN_TENSORFLOW_PIPELINE/data/earthworms
+  - ../CNN_TENSORFLOW_PIPELINE/data/earwig
+  - ../CNN_TENSORFLOW_PIPELINE/data/grasshopper
+  - ../CNN_TENSORFLOW_PIPELINE/data/slug
+  - ../CNN_TENSORFLOW_PIPELINE/data/moth
+  - ../CNN_TENSORFLOW_PIPELINE/data/snail
+  - ../CNN_TENSORFLOW_PIPELINE/data/wasp
+  - ../CNN_TENSORFLOW_PIPELINE/data/weevil

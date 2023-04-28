@@ -1,8 +1,22 @@
 # add stages here 
-# stages:
-#   stage_name:
-#     cmd: python src/stage_01______.py
-#     deps:
-#     - src/stage_01______.py
-#     outs:
-#     - output_data_of_file_path
+stages:
+  stage_01_get_data:
+    cmd: python src/stage_01_get_data.py --config_path=configs/config.yaml
+    deps:
+    - src/stage_01_get_data.py
+    - src/utils/common_utils.py
+    - configs/config.yaml
+    outs:
+    - data/ants
+    - data/beetle
+    - data/bees
+    - data/catterpillar
+    - data/earthworms
+    - data/earwig
+    - data/grasshopper
+    - data/slug
+    - data/moth
+    - data/snail
+    - data/wasp
+    - data/weevil
+

@@ -1,0 +1,659 @@
+[2023-04-26 00:36:50,706: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 00:36:50,706: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 00:36:50,706: ERROR: stage_01_get_data]: get_data() got an unexpected keyword argument 'params_path'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 49, in <module>
+    get_data(config_path=parsed_args.config, params_path=parsed_args.params)
+TypeError: get_data() got an unexpected keyword argument 'params_path'
+[2023-04-26 00:37:53,508: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 00:37:53,518: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 00:37:53,518: ERROR: stage_01_get_data]: get_data() got an unexpected keyword argument 'params_path'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 49, in <module>
+    get_data(config_path=parsed_args.config, params_path=parsed_args.params)
+TypeError: get_data() got an unexpected keyword argument 'params_path'
+[2023-04-26 00:40:46,220: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 00:40:46,220: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 00:40:46,220: ERROR: stage_01_get_data]: 'Namespace' object has no attribute 'params'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 49, in <module>
+    get_data(config_path=parsed_args.config, params_path=parsed_args.params)
+AttributeError: 'Namespace' object has no attribute 'params'
+[2023-04-26 00:41:36,290: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 00:41:36,291: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 00:41:36,291: ERROR: stage_01_get_data]: module 'src.utils.common_utils' has no attribute 'read_yaml'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 49, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 27, in get_data
+    config = utils.read_yaml(config_path)
+AttributeError: module 'src.utils.common_utils' has no attribute 'read_yaml'
+[2023-04-26 00:55:48,077: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 00:55:48,077: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 00:55:48,082: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 00:55:48,082: ERROR: stage_01_get_data]: 'data_source'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 49, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 28, in get_data
+    remote_data_path = config["data_source"]
+                       ~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'data_source'
+[2023-04-26 00:57:05,004: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 00:57:05,004: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 00:57:05,005: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 00:57:05,005: ERROR: stage_01_get_data]: expected str, bytes or os.PathLike object, not list
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 49, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 30, in get_data
+    utils.create_directories([local_data_path])
+  File "c:\users\yaqoo\tf pipeline\cnn_tensorflow_pipeline\src\utils\common_utils.py", line 16, in create_directories
+    os.makedirs(path, exist_ok=True)
+  File "<frozen os>", line 210, in makedirs
+  File "<frozen ntpath>", line 213, in split
+TypeError: expected str, bytes or os.PathLike object, not list
+[2023-04-26 00:58:43,546: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 00:58:43,546: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 00:58:43,547: ERROR: stage_01_get_data]: while scanning a double-quoted scalar
+  in "configs/config.yaml", line 14, column 5
+expected escape sequence of 8 hexadecimal numbers, but found 's'
+  in "configs/config.yaml", line 14, column 10
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 49, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 27, in get_data
+    config = utils.read_yaml(config_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\users\yaqoo\tf pipeline\cnn_tensorflow_pipeline\src\utils\common_utils.py", line 10, in read_yaml
+    content = yaml.safe_load(yaml_file)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\__init__.py", line 81, in load
+    return loader.get_single_data()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\composer.py", line 36, in get_single_node
+    document = self.compose_document()
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\composer.py", line 82, in compose_node
+    node = self.compose_sequence_node(anchor)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\composer.py", line 110, in compose_sequence_node
+    while not self.check_event(SequenceEndEvent):
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\parser.py", line 98, in check_event
+    self.current_event = self.state()
+                         ^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\parser.py", line 379, in parse_block_sequence_first_entry
+    return self.parse_block_sequence_entry()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\parser.py", line 384, in parse_block_sequence_entry
+    if not self.check_token(BlockEntryToken, BlockEndToken):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\scanner.py", line 116, in check_token
+    self.fetch_more_tokens()
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\scanner.py", line 251, in fetch_more_tokens
+    return self.fetch_double()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\scanner.py", line 655, in fetch_double
+    self.fetch_flow_scalar(style='"')
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\scanner.py", line 666, in fetch_flow_scalar
+    self.tokens.append(self.scan_flow_scalar(style))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\scanner.py", line 1149, in scan_flow_scalar
+    chunks.extend(self.scan_flow_scalar_non_spaces(double, start_mark))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\site-packages\yaml\scanner.py", line 1213, in scan_flow_scalar_non_spaces
+    raise ScannerError("while scanning a double-quoted scalar", start_mark,
+yaml.scanner.ScannerError: while scanning a double-quoted scalar
+  in "configs/config.yaml", line 14, column 5
+expected escape sequence of 8 hexadecimal numbers, but found 's'
+  in "configs/config.yaml", line 14, column 10
+[2023-04-26 00:59:39,121: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 00:59:39,121: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 00:59:39,123: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 00:59:39,123: ERROR: stage_01_get_data]: expected str, bytes or os.PathLike object, not list
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 49, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 30, in get_data
+    utils.create_directories([local_data_path])
+  File "c:\users\yaqoo\tf pipeline\cnn_tensorflow_pipeline\src\utils\common_utils.py", line 16, in create_directories
+    os.makedirs(path, exist_ok=True)
+  File "<frozen os>", line 210, in makedirs
+  File "<frozen ntpath>", line 213, in split
+TypeError: expected str, bytes or os.PathLike object, not list
+[2023-04-26 01:00:14,910: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:00:14,910: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:00:14,911: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:00:14,911: ERROR: stage_01_get_data]: expected str, bytes or os.PathLike object, not list
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 49, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 30, in get_data
+    utils.create_directories([local_data_path])
+  File "c:\users\yaqoo\tf pipeline\cnn_tensorflow_pipeline\src\utils\common_utils.py", line 16, in create_directories
+    os.makedirs(path, exist_ok=True)
+  File "<frozen os>", line 210, in makedirs
+  File "<frozen ntpath>", line 213, in split
+TypeError: expected str, bytes or os.PathLike object, not list
+[2023-04-26 01:01:09,553: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:01:09,553: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:01:09,554: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:01:09,555: ERROR: stage_01_get_data]: expected str, bytes or os.PathLike object, not list
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 49, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 30, in get_data
+    utils.create_directories([local_data_path])
+  File "c:\users\yaqoo\tf pipeline\cnn_tensorflow_pipeline\src\utils\common_utils.py", line 16, in create_directories
+    os.makedirs(path, exist_ok=True)
+  File "<frozen os>", line 210, in makedirs
+  File "<frozen ntpath>", line 213, in split
+TypeError: expected str, bytes or os.PathLike object, not list
+[2023-04-26 01:01:37,456: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:01:37,456: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:01:37,457: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:01:37,457: ERROR: stage_01_get_data]: expected str, bytes or os.PathLike object, not list
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 49, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 30, in get_data
+    utils.create_directories([local_data_path])
+  File "c:\users\yaqoo\tf pipeline\cnn_tensorflow_pipeline\src\utils\common_utils.py", line 16, in create_directories
+    os.makedirs(path, exist_ok=True)
+  File "<frozen os>", line 210, in makedirs
+  File "<frozen ntpath>", line 213, in split
+TypeError: expected str, bytes or os.PathLike object, not list
+[2023-04-26 01:03:34,591: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:03:34,591: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:03:34,592: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:03:34,593: INFO: common_utils]: created directory at: dataset
+[2023-04-26 01:03:34,635: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
+
+[2023-04-26 01:09:22,851: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:09:22,852: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:09:22,853: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:09:22,853: INFO: stage_01_get_data]: Downloading data from C to d
+[2023-04-26 01:09:22,853: INFO: common_utils]: created directory at: d
+[2023-04-26 01:09:22,853: ERROR: stage_01_get_data]: [WinError 3] The system cannot find the path specified: 'C'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 50, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 36, in get_data
+    for file in tqdm(os.listdir(source_data_dir)):
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C'
+[2023-04-26 01:10:41,747: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:10:41,747: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:10:41,748: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:10:41,748: INFO: stage_01_get_data]: Downloading data from / to d
+[2023-04-26 01:10:41,748: INFO: common_utils]: created directory at: d
+[2023-04-26 01:10:41,756: ERROR: stage_01_get_data]: [Errno 13] Permission denied: '/$Recycle.Bin'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 50, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 37, in get_data
+    shutil.copy(os.path.join(source_data_dir, file), local_data_dir)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 419, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 256, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/$Recycle.Bin'
+[2023-04-26 01:11:02,682: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:11:02,683: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:11:02,684: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:11:02,684: INFO: stage_01_get_data]: Downloading data from . to d
+[2023-04-26 01:11:02,684: INFO: common_utils]: created directory at: d
+[2023-04-26 01:11:02,693: ERROR: stage_01_get_data]: [Errno 13] Permission denied: '.\\.git'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 50, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 37, in get_data
+    shutil.copy(os.path.join(source_data_dir, file), local_data_dir)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 419, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 256, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '.\\.git'
+[2023-04-26 01:15:01,765: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:15:01,765: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:15:01,767: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:15:01,767: INFO: stage_01_get_data]: Downloading data from . to d
+[2023-04-26 01:15:01,767: INFO: common_utils]: created directory at: d
+[2023-04-26 01:15:01,776: ERROR: stage_01_get_data]: [Errno 13] Permission denied: '.\\.git'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 50, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 37, in get_data
+    shutil.copy(os.path.join(source_data_dir, file), local_data_dir)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 419, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 256, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '.\\.git'
+[2023-04-26 01:16:06,417: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:16:06,417: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:16:06,418: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:16:06,418: INFO: stage_01_get_data]: Downloading data from . to d
+[2023-04-26 01:16:06,419: INFO: common_utils]: created directory at: d
+[2023-04-26 01:16:06,428: ERROR: stage_01_get_data]: [Errno 13] Permission denied: '.\\.git'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 50, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 37, in get_data
+    shutil.copy(os.path.join(source_data_dir, file), local_data_dir)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 419, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 256, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '.\\.git'
+[2023-04-26 01:16:46,947: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:16:46,947: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:16:46,948: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:16:46,949: INFO: stage_01_get_data]: Downloading data from . to d
+[2023-04-26 01:16:46,949: INFO: common_utils]: created directory at: d
+[2023-04-26 01:16:46,956: ERROR: stage_01_get_data]: [Errno 13] Permission denied: '.\\.git'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 50, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 37, in get_data
+    shutil.copy(os.path.join(source_data_dir, file), local_data_dir)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 419, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 256, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '.\\.git'
+[2023-04-26 01:17:25,186: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:17:25,186: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:17:25,187: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:17:25,187: INFO: stage_01_get_data]: Downloading data from . to d
+[2023-04-26 01:17:25,187: INFO: common_utils]: created directory at: d
+[2023-04-26 01:17:25,196: ERROR: stage_01_get_data]: [Errno 13] Permission denied: '.\\.git'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 45, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 32, in get_data
+    shutil.copy(os.path.join(source_data_dir, file), local_data_dir)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 419, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 256, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '.\\.git'
+[2023-04-26 01:18:01,377: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:18:01,378: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:18:01,379: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:18:01,379: INFO: stage_01_get_data]: Downloading data from . to .
+[2023-04-26 01:18:01,379: INFO: common_utils]: created directory at: .
+[2023-04-26 01:18:01,385: ERROR: stage_01_get_data]: '.\\.git' and '.\\.git' are the same file
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 45, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 32, in get_data
+    shutil.copy(os.path.join(source_data_dir, file), local_data_dir)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 419, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 236, in copyfile
+    raise SameFileError("{!r} and {!r} are the same file".format(src, dst))
+shutil.SameFileError: '.\\.git' and '.\\.git' are the same file
+[2023-04-26 01:20:09,808: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:20:09,808: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:20:09,809: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:20:09,809: INFO: stage_01_get_data]: Downloading data from . to .
+[2023-04-26 01:20:09,809: INFO: common_utils]: created directory at: .
+[2023-04-26 01:20:09,816: ERROR: stage_01_get_data]: '.\\.git' and '.\\.git' are the same file
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 45, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 32, in get_data
+    shutil.copy(os.path.join(source_data_dir, file), local_data_dir)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 419, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 236, in copyfile
+    raise SameFileError("{!r} and {!r} are the same file".format(src, dst))
+shutil.SameFileError: '.\\.git' and '.\\.git' are the same file
+[2023-04-26 01:21:37,463: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:21:37,463: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:21:37,464: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:21:37,464: INFO: stage_01_get_data]: Downloading data from ../dataset/ants to ../data
+[2023-04-26 01:21:37,464: INFO: common_utils]: created directory at: ../data
+[2023-04-26 01:21:42,691: INFO: stage_01_get_data]: Downloaded data from ../dataset/ants to ../data
+[2023-04-26 01:21:42,691: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
+
+[2023-04-26 01:23:26,050: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:23:26,050: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:23:26,051: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:23:26,051: INFO: stage_01_get_data]: Downloading data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/dataset/ants
+[2023-04-26 01:23:26,051: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/dataset/ants
+[2023-04-26 01:23:26,374: INFO: stage_01_get_data]: Downloaded data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/dataset/ants
+[2023-04-26 01:23:26,374: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
+
+[2023-04-26 01:23:44,749: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:23:44,749: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:23:44,750: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:23:44,750: INFO: stage_01_get_data]: Downloading data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/dataset/ants
+[2023-04-26 01:23:44,751: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/dataset/ants
+[2023-04-26 01:23:45,062: INFO: stage_01_get_data]: Downloaded data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/dataset/ants
+[2023-04-26 01:23:45,062: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
+
+[2023-04-26 01:29:52,098: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:29:52,098: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:29:52,099: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:29:52,100: INFO: stage_01_get_data]: Downloading data from ../dataset to ../CNN_TENSORFLOW_PIPELINE/data
+[2023-04-26 01:29:52,100: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data
+[2023-04-26 01:29:52,106: ERROR: stage_01_get_data]: [Errno 13] Permission denied: '../dataset\\ants'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 45, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 32, in get_data
+    shutil.copy(os.path.join(source_data_dir, file), local_data_dir)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 419, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 256, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '../dataset\\ants'
+[2023-04-26 01:30:20,878: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:30:20,878: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:30:20,879: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:30:20,879: INFO: stage_01_get_data]: Downloading data from ../dataset/ to ../CNN_TENSORFLOW_PIPELINE/data/
+[2023-04-26 01:30:20,879: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/
+[2023-04-26 01:30:20,885: ERROR: stage_01_get_data]: [Errno 13] Permission denied: '../dataset/ants'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 45, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 32, in get_data
+    shutil.copy(os.path.join(source_data_dir, file), local_data_dir)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 419, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\yaqoo\anaconda3\envs\simple-dvc-project\Lib\shutil.py", line 256, in copyfile
+    with open(src, 'rb') as fsrc:
+         ^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '../dataset/ants'
+[2023-04-26 01:39:21,215: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:39:21,215: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:39:21,218: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:39:21,218: INFO: stage_01_get_data]: Downloading data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 01:39:21,218: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 01:39:21,538: INFO: stage_01_get_data]: Downloaded data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 01:39:21,538: INFO: stage_01_get_data]: Downloading data from ../dataset/beetle to ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 01:39:21,539: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 01:39:25,659: INFO: stage_01_get_data]: Downloaded data from ../dataset/beetle to ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 01:39:25,659: INFO: stage_01_get_data]: Downloading data from ../dataset/bees to ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 01:39:25,659: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 01:39:30,812: INFO: stage_01_get_data]: Downloaded data from ../dataset/bees to ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 01:39:30,812: INFO: stage_01_get_data]: Downloading data from ../dataset/caterpillar to ../CNN_TENSORFLOW_PIPELINE/data/caterpillar
+[2023-04-26 01:39:30,812: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/caterpillar
+[2023-04-26 01:39:30,812: ERROR: stage_01_get_data]: [WinError 3] The system cannot find the path specified: '../dataset/caterpillar'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 45, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 31, in get_data
+    for file in tqdm(os.listdir(source_data_dir)):
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: '../dataset/caterpillar'
+[2023-04-26 01:51:42,996: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:51:42,996: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:51:42,998: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:51:42,998: INFO: stage_01_get_data]: Downloading data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 01:51:42,998: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 01:51:43,363: INFO: stage_01_get_data]: Downloaded data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 01:51:43,363: INFO: stage_01_get_data]: Downloading data from ../dataset/beetle to ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 01:51:43,363: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 01:51:43,777: INFO: stage_01_get_data]: Downloaded data from ../dataset/beetle to ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 01:51:43,777: INFO: stage_01_get_data]: Downloading data from ../dataset/bees to ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 01:51:43,777: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 01:51:44,185: INFO: stage_01_get_data]: Downloaded data from ../dataset/bees to ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 01:51:44,185: INFO: stage_01_get_data]: Downloading data from ../dataset/caterpillar to ../CNN_TENSORFLOW_PIPELINE/data/catterpillar
+[2023-04-26 01:51:44,185: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/catterpillar
+[2023-04-26 01:51:44,186: ERROR: stage_01_get_data]: [WinError 3] The system cannot find the path specified: '../dataset/caterpillar'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 45, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 31, in get_data
+    for file in tqdm(os.listdir(source_data_dir)):
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: '../dataset/caterpillar'
+[2023-04-26 01:52:54,814: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 01:52:54,814: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 01:52:54,817: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 01:52:54,817: INFO: stage_01_get_data]: Downloading data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 01:52:54,818: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 01:52:55,217: INFO: stage_01_get_data]: Downloaded data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 01:52:55,217: INFO: stage_01_get_data]: Downloading data from ../dataset/beetle to ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 01:52:55,217: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 01:52:55,602: INFO: stage_01_get_data]: Downloaded data from ../dataset/beetle to ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 01:52:55,602: INFO: stage_01_get_data]: Downloading data from ../dataset/bees to ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 01:52:55,602: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 01:52:55,981: INFO: stage_01_get_data]: Downloaded data from ../dataset/bees to ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 01:52:55,981: INFO: stage_01_get_data]: Downloading data from ../dataset/catterpillar to ../CNN_TENSORFLOW_PIPELINE/data/catterpillar
+[2023-04-26 01:52:55,981: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/catterpillar
+[2023-04-26 01:52:59,480: INFO: stage_01_get_data]: Downloaded data from ../dataset/catterpillar to ../CNN_TENSORFLOW_PIPELINE/data/catterpillar
+[2023-04-26 01:52:59,481: INFO: stage_01_get_data]: Downloading data from ../dataset/earthworms to ../CNN_TENSORFLOW_PIPELINE/data/earthworms
+[2023-04-26 01:52:59,481: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/earthworms
+[2023-04-26 01:53:02,188: INFO: stage_01_get_data]: Downloaded data from ../dataset/earthworms to ../CNN_TENSORFLOW_PIPELINE/data/earthworms
+[2023-04-26 01:53:02,188: INFO: stage_01_get_data]: Downloading data from ../dataset/earwig to ../CNN_TENSORFLOW_PIPELINE/data/earwig
+[2023-04-26 01:53:02,188: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/earwig
+[2023-04-26 01:53:06,057: INFO: stage_01_get_data]: Downloaded data from ../dataset/earwig to ../CNN_TENSORFLOW_PIPELINE/data/earwig
+[2023-04-26 01:53:06,057: INFO: stage_01_get_data]: Downloading data from ../dataset/grasshopper to ../CNN_TENSORFLOW_PIPELINE/data/grasshopper
+[2023-04-26 01:53:06,057: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/grasshopper
+[2023-04-26 01:53:10,160: INFO: stage_01_get_data]: Downloaded data from ../dataset/grasshopper to ../CNN_TENSORFLOW_PIPELINE/data/grasshopper
+[2023-04-26 01:53:10,160: INFO: stage_01_get_data]: Downloading data from ../dataset/slug to ../CNN_TENSORFLOW_PIPELINE/data/slug
+[2023-04-26 01:53:10,161: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/slug
+[2023-04-26 01:53:13,473: INFO: stage_01_get_data]: Downloaded data from ../dataset/slug to ../CNN_TENSORFLOW_PIPELINE/data/slug
+[2023-04-26 01:53:13,474: INFO: stage_01_get_data]: Downloading data from ../dataset/moth to ../CNN_TENSORFLOW_PIPELINE/data/moth
+[2023-04-26 01:53:13,474: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/moth
+[2023-04-26 01:53:17,791: INFO: stage_01_get_data]: Downloaded data from ../dataset/moth to ../CNN_TENSORFLOW_PIPELINE/data/moth
+[2023-04-26 01:53:17,791: INFO: stage_01_get_data]: Downloading data from ../dataset/snail to ../CNN_TENSORFLOW_PIPELINE/data/snail
+[2023-04-26 01:53:17,792: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/snail
+[2023-04-26 01:53:22,095: INFO: stage_01_get_data]: Downloaded data from ../dataset/snail to ../CNN_TENSORFLOW_PIPELINE/data/snail
+[2023-04-26 01:53:22,095: INFO: stage_01_get_data]: Downloading data from ../dataset/wasp to ../CNN_TENSORFLOW_PIPELINE/data/wasp
+[2023-04-26 01:53:22,095: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/wasp
+[2023-04-26 01:53:26,436: INFO: stage_01_get_data]: Downloaded data from ../dataset/wasp to ../CNN_TENSORFLOW_PIPELINE/data/wasp
+[2023-04-26 01:53:26,436: INFO: stage_01_get_data]: Downloading data from ../dataset/weevil to ../CNN_TENSORFLOW_PIPELINE/data/weevil
+[2023-04-26 01:53:26,436: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/weevil
+[2023-04-26 01:53:30,605: INFO: stage_01_get_data]: Downloaded data from ../dataset/weevil to ../CNN_TENSORFLOW_PIPELINE/data/weevil
+[2023-04-26 01:53:30,605: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
+
+[2023-04-26 12:39:08,871: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 12:39:08,871: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 12:39:08,873: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 12:39:08,873: ERROR: stage_01_get_data]: module 'src.utils.common_utils' has no attribute 'copy_files'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 29, in get_data
+    utils.copy_files(source_data_dir, local_data_dir)
+    ^^^^^^^^^^^^^^^^
+AttributeError: module 'src.utils.common_utils' has no attribute 'copy_files'
+[2023-04-26 12:39:53,060: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 12:39:53,060: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 12:39:53,062: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 12:39:53,062: INFO: common_utils]: Downloading data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 12:39:53,062: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 12:39:53,063: ERROR: stage_01_get_data]: 'module' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 29, in get_data
+    utils.copy_files(source_data_dir, local_data_dir)
+  File "c:\users\yaqoo\tf pipeline\cnn_tensorflow_pipeline\src\utils\common_utils.py", line 29, in copy_files
+    for file in tqdm(os.listdir(source)):
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+[2023-04-26 12:47:51,636: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 12:47:51,636: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 12:47:51,640: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 12:47:51,640: INFO: common_utils]: Downloading data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 12:47:51,640: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 12:47:51,641: ERROR: stage_01_get_data]: 'module' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 29, in get_data
+    utils.copy_files(source_data_dir, local_data_dir)
+  File "c:\users\yaqoo\tf pipeline\cnn_tensorflow_pipeline\src\utils\common_utils.py", line 29, in copy_files
+    for file in tqdm(os.listdir(source)):
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+[2023-04-26 12:51:36,476: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 12:51:36,476: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 12:51:36,478: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 12:51:36,478: INFO: common_utils]: Downloading data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 12:51:36,478: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 12:51:36,478: ERROR: stage_01_get_data]: 'module' object is not callable
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 40, in <module>
+    get_data(config_path=parsed_args.config)
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 29, in get_data
+    utils.copy_files(source_data_dir, local_data_dir)
+  File "c:\users\yaqoo\tf pipeline\cnn_tensorflow_pipeline\src\utils\common_utils.py", line 29, in copy_files
+    for file in tqdm(os.listdir(source)):
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'module' object is not callable
+[2023-04-26 12:51:49,749: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 12:51:49,750: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 12:51:49,751: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 12:51:49,752: INFO: stage_01_get_data]: Downloading data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 12:51:49,752: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 12:51:52,645: INFO: stage_01_get_data]: Downloaded data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 12:51:52,645: INFO: stage_01_get_data]: Downloading data from ../dataset/beetle to ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 12:51:52,646: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 12:51:55,037: INFO: stage_01_get_data]: Downloaded data from ../dataset/beetle to ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 12:51:55,037: INFO: stage_01_get_data]: Downloading data from ../dataset/bees to ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 12:51:55,037: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 12:51:57,897: INFO: stage_01_get_data]: Downloaded data from ../dataset/bees to ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 12:51:57,897: INFO: stage_01_get_data]: Downloading data from ../dataset/catterpillar to ../CNN_TENSORFLOW_PIPELINE/data/catterpillar
+[2023-04-26 12:51:57,897: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/catterpillar
+[2023-04-26 12:52:00,436: INFO: stage_01_get_data]: Downloaded data from ../dataset/catterpillar to ../CNN_TENSORFLOW_PIPELINE/data/catterpillar
+[2023-04-26 12:52:00,436: INFO: stage_01_get_data]: Downloading data from ../dataset/earthworms to ../CNN_TENSORFLOW_PIPELINE/data/earthworms
+[2023-04-26 12:52:00,436: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/earthworms
+[2023-04-26 12:52:02,337: INFO: stage_01_get_data]: Downloaded data from ../dataset/earthworms to ../CNN_TENSORFLOW_PIPELINE/data/earthworms
+[2023-04-26 12:52:02,337: INFO: stage_01_get_data]: Downloading data from ../dataset/earwig to ../CNN_TENSORFLOW_PIPELINE/data/earwig
+[2023-04-26 12:52:02,337: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/earwig
+[2023-04-26 12:52:05,020: INFO: stage_01_get_data]: Downloaded data from ../dataset/earwig to ../CNN_TENSORFLOW_PIPELINE/data/earwig
+[2023-04-26 12:52:05,021: INFO: stage_01_get_data]: Downloading data from ../dataset/grasshopper to ../CNN_TENSORFLOW_PIPELINE/data/grasshopper
+[2023-04-26 12:52:05,021: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/grasshopper
+[2023-04-26 12:52:07,877: INFO: stage_01_get_data]: Downloaded data from ../dataset/grasshopper to ../CNN_TENSORFLOW_PIPELINE/data/grasshopper
+[2023-04-26 12:52:07,877: INFO: stage_01_get_data]: Downloading data from ../dataset/slug to ../CNN_TENSORFLOW_PIPELINE/data/slug
+[2023-04-26 12:52:07,877: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/slug
+[2023-04-26 12:52:10,051: INFO: stage_01_get_data]: Downloaded data from ../dataset/slug to ../CNN_TENSORFLOW_PIPELINE/data/slug
+[2023-04-26 12:52:10,051: INFO: stage_01_get_data]: Downloading data from ../dataset/moth to ../CNN_TENSORFLOW_PIPELINE/data/moth
+[2023-04-26 12:52:10,052: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/moth
+[2023-04-26 12:52:12,881: INFO: stage_01_get_data]: Downloaded data from ../dataset/moth to ../CNN_TENSORFLOW_PIPELINE/data/moth
+[2023-04-26 12:52:12,881: INFO: stage_01_get_data]: Downloading data from ../dataset/snail to ../CNN_TENSORFLOW_PIPELINE/data/snail
+[2023-04-26 12:52:12,882: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/snail
+[2023-04-26 12:52:15,899: INFO: stage_01_get_data]: Downloaded data from ../dataset/snail to ../CNN_TENSORFLOW_PIPELINE/data/snail
+[2023-04-26 12:52:15,899: INFO: stage_01_get_data]: Downloading data from ../dataset/wasp to ../CNN_TENSORFLOW_PIPELINE/data/wasp
+[2023-04-26 12:52:15,899: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/wasp
+[2023-04-26 12:52:19,726: INFO: stage_01_get_data]: Downloaded data from ../dataset/wasp to ../CNN_TENSORFLOW_PIPELINE/data/wasp
+[2023-04-26 12:52:19,726: INFO: stage_01_get_data]: Downloading data from ../dataset/weevil to ../CNN_TENSORFLOW_PIPELINE/data/weevil
+[2023-04-26 12:52:19,727: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/weevil
+[2023-04-26 12:52:22,890: INFO: stage_01_get_data]: Downloaded data from ../dataset/weevil to ../CNN_TENSORFLOW_PIPELINE/data/weevil
+[2023-04-26 12:52:22,890: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
+
+[2023-04-26 13:00:03,339: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 13:00:03,339: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 13:00:03,339: ERROR: stage_01_get_data]: 'Namespace' object has no attribute 'config'
+Traceback (most recent call last):
+  File "C:\Users\yaqoo\TF Pipeline\CNN_TENSORFLOW_PIPELINE\src\stage_01_get_data.py", line 44, in <module>
+    get_data(config_path=parsed_args.config)
+                         ^^^^^^^^^^^^^^^^^^
+AttributeError: 'Namespace' object has no attribute 'config'
+[2023-04-26 13:00:23,372: INFO: stage_01_get_data]: 
+********************
+[2023-04-26 13:00:23,372: INFO: stage_01_get_data]: >>>>> stage GET DATA started <<<<<
+[2023-04-26 13:00:23,374: INFO: common_utils]: yaml file: configs/config.yaml loaded successfully
+[2023-04-26 13:00:23,374: INFO: stage_01_get_data]: Downloading data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 13:00:23,374: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 13:00:23,722: INFO: stage_01_get_data]: Downloaded data from ../dataset/ants to ../CNN_TENSORFLOW_PIPELINE/data/ants
+[2023-04-26 13:00:23,722: INFO: stage_01_get_data]: Downloading data from ../dataset/beetle to ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 13:00:23,723: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 13:00:24,018: INFO: stage_01_get_data]: Downloaded data from ../dataset/beetle to ../CNN_TENSORFLOW_PIPELINE/data/beetle
+[2023-04-26 13:00:24,018: INFO: stage_01_get_data]: Downloading data from ../dataset/bees to ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 13:00:24,018: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 13:00:24,409: INFO: stage_01_get_data]: Downloaded data from ../dataset/bees to ../CNN_TENSORFLOW_PIPELINE/data/bees
+[2023-04-26 13:00:24,409: INFO: stage_01_get_data]: Downloading data from ../dataset/catterpillar to ../CNN_TENSORFLOW_PIPELINE/data/catterpillar
+[2023-04-26 13:00:24,410: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/catterpillar
+[2023-04-26 13:00:24,777: INFO: stage_01_get_data]: Downloaded data from ../dataset/catterpillar to ../CNN_TENSORFLOW_PIPELINE/data/catterpillar
+[2023-04-26 13:00:24,777: INFO: stage_01_get_data]: Downloading data from ../dataset/earthworms to ../CNN_TENSORFLOW_PIPELINE/data/earthworms
+[2023-04-26 13:00:24,777: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/earthworms
+[2023-04-26 13:00:25,019: INFO: stage_01_get_data]: Downloaded data from ../dataset/earthworms to ../CNN_TENSORFLOW_PIPELINE/data/earthworms
+[2023-04-26 13:00:25,019: INFO: stage_01_get_data]: Downloading data from ../dataset/earwig to ../CNN_TENSORFLOW_PIPELINE/data/earwig
+[2023-04-26 13:00:25,019: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/earwig
+[2023-04-26 13:00:25,378: INFO: stage_01_get_data]: Downloaded data from ../dataset/earwig to ../CNN_TENSORFLOW_PIPELINE/data/earwig
+[2023-04-26 13:00:25,379: INFO: stage_01_get_data]: Downloading data from ../dataset/grasshopper to ../CNN_TENSORFLOW_PIPELINE/data/grasshopper
+[2023-04-26 13:00:25,379: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/grasshopper
+[2023-04-26 13:00:25,774: INFO: stage_01_get_data]: Downloaded data from ../dataset/grasshopper to ../CNN_TENSORFLOW_PIPELINE/data/grasshopper
+[2023-04-26 13:00:25,774: INFO: stage_01_get_data]: Downloading data from ../dataset/slug to ../CNN_TENSORFLOW_PIPELINE/data/slug
+[2023-04-26 13:00:25,774: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/slug
+[2023-04-26 13:00:26,097: INFO: stage_01_get_data]: Downloaded data from ../dataset/slug to ../CNN_TENSORFLOW_PIPELINE/data/slug
+[2023-04-26 13:00:26,097: INFO: stage_01_get_data]: Downloading data from ../dataset/moth to ../CNN_TENSORFLOW_PIPELINE/data/moth
+[2023-04-26 13:00:26,098: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/moth
+[2023-04-26 13:00:26,474: INFO: stage_01_get_data]: Downloaded data from ../dataset/moth to ../CNN_TENSORFLOW_PIPELINE/data/moth
+[2023-04-26 13:00:26,474: INFO: stage_01_get_data]: Downloading data from ../dataset/snail to ../CNN_TENSORFLOW_PIPELINE/data/snail
+[2023-04-26 13:00:26,475: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/snail
+[2023-04-26 13:00:26,867: INFO: stage_01_get_data]: Downloaded data from ../dataset/snail to ../CNN_TENSORFLOW_PIPELINE/data/snail
+[2023-04-26 13:00:26,867: INFO: stage_01_get_data]: Downloading data from ../dataset/wasp to ../CNN_TENSORFLOW_PIPELINE/data/wasp
+[2023-04-26 13:00:26,868: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/wasp
+[2023-04-26 13:00:27,244: INFO: stage_01_get_data]: Downloaded data from ../dataset/wasp to ../CNN_TENSORFLOW_PIPELINE/data/wasp
+[2023-04-26 13:00:27,244: INFO: stage_01_get_data]: Downloading data from ../dataset/weevil to ../CNN_TENSORFLOW_PIPELINE/data/weevil
+[2023-04-26 13:00:27,245: INFO: common_utils]: created directory at: ../CNN_TENSORFLOW_PIPELINE/data/weevil
+[2023-04-26 13:00:27,591: INFO: stage_01_get_data]: Downloaded data from ../dataset/weevil to ../CNN_TENSORFLOW_PIPELINE/data/weevil
+[2023-04-26 13:00:27,592: INFO: stage_01_get_data]: >>>>> stage GET DATA completed!<<<<<
+
