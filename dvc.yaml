@@ -26,5 +26,17 @@ stages:
     - src/utils/common_utils.py
     - configs/config.yaml
     - src/utils/model.py
+    - params.yaml
     outs:
     - artifacts/base_model/updated_base_model.h5
+  stage_03_prepare_callback:
+    cmd: python src/stage_03_prepare_callback.py --config_path=configs/config.yaml
+    deps:
+    - src/stage_03_prepare_callback.py
+    - src/utils/common_utils.py
+    - configs/config.yaml
+    - src/utils/call_backs.py
+    outs:
+    - artifacts/callbacks/tensorboard.pkl
+    - artifacts/callbacks/model_checkpoint.h5
+    - artifacts/callbacks/early_stopping.pkl

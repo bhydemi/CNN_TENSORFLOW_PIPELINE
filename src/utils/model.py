@@ -1,5 +1,6 @@
 import tensorflow as tf
 import logging
+import io
 
 
 def get_base_model(params):
@@ -37,6 +38,17 @@ def prepare_full_model(base_model, params, freeze_base_model=True, freeze_till=N
 
     model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=params['LEARNING_RATE']), loss=params['LOSS'], metrics=params['METRICS'])
     logging.info("compilation of model is done")
-    model.summary()
+    
+    def __get_model_summary(model):
+        with io.StringIO() as stream:
+            model.summary(print_fn=lambda x: stream.write(f"{x}\n"))
+            summary_string = stream.getvalue()
+        return summary_string
+    
+    logging.info(f"model summary: \n {__get_model_summary(model)}")
 
+    return model
+
+def load_model(model_path):
+    model = tf.keras.models.load_model(model_path)
     return model

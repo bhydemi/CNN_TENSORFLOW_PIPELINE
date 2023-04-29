@@ -25,9 +25,7 @@ def prepare_base_model(config_path, params_path):
     params = read_yaml(params_path)
     artifacts_dir = config["artifacts"]["ARTIFACTS_DIR"]
     base_model_dir = config["artifacts"]["BASE_MODEL_DIR"]
-    base_model_name = config["artifacts"]["BASE_MODEL_NAME"]
     base_model_dir_path = os.path.join(artifacts_dir, base_model_dir)
-    base_model_path = os.path.join(base_model_dir_path, base_model_name)
     create_directories([base_model_dir_path])
 
     base_model = get_base_model(params)
