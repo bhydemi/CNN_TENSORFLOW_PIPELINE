@@ -19,4 +19,12 @@ stages:
     - data/snail
     - data/wasp
     - data/weevil
-
+  stage_02_prepare_base_model:
+    cmd: python src/stage_02_prepare_base_model.py --config_path=configs/config.yaml --params_path=params.yaml
+    deps:
+    - src/stage_02_prepare_base_model.py
+    - src/utils/common_utils.py
+    - configs/config.yaml
+    - src/utils/model.py
+    outs:
+    - artifacts/base_model/updated_base_model.h5

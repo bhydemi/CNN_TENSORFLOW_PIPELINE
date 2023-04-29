@@ -1,1 +1,8 @@
 # This contains params to be used by the stages to train or predict
+IMAGE_SIZE: 224
+BATCH_SIZE: 32
+EPOCHS: 10
+MODEL_NAME: "inception_v3"
+CLASSES: ["ants", "beetle", "bees", "catterpillar", "earthworms", "earwig", "grasshopper", "slug", "moth", "snail", "wasp", "weevil"]
+CLASSES_COUNT: 12
+LEARNING_RATE: 0.0001
