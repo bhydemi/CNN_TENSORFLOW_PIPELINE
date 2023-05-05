@@ -6,7 +6,7 @@ import pandas as pd
 import json
 import shutil
 import tqdm
-
+import tensorflow as tf
 
 def read_yaml(path_to_yaml):
     """This function reads the yaml file and returns the content
@@ -55,3 +55,22 @@ def copy_files(source: str, destination: str):
     for file in tqdm(os.listdir(source)):
         shutil.copy(os.path.join(source, file), destination)
         logging.info(f"Downloaded data from {source} to {destination}")
+
+def load_image_data(image_dir, params):
+    train_ds  = tf.keras.utils.image_dataset_from_directory(
+        image_dir,
+        validation_split=0.2,
+        subset="training",
+        image_size=(params['IMAGE_SIZE'],params['IMAGE_SIZE']),
+        batch_size=params['BATCH_SIZE'],
+        seed=123,
+    )
+    val_ds = tf.keras.utils.image_dataset_from_directory(
+        image_dir,
+        validation_split=0.2,
+        subset="validation",
+        image_size=(params['IMAGE_SIZE'],params['IMAGE_SIZE']),
+        batch_size=params['BATCH_SIZE'],
+        seed=123
+    )
+    return train_ds, val_ds

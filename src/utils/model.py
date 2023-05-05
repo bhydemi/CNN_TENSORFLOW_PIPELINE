@@ -1,10 +1,11 @@
 import tensorflow as tf
 import logging
 import io
+import os
 
 
 def get_base_model(params):
-    base_model = tf.keras.applications.ResNet50(
+    base_model = tf.keras.applications.ResNet101(
         weights="imagenet",
         input_shape=(params["IMAGE_SIZE"], params["IMAGE_SIZE"], 3),
         include_top=False,
@@ -36,7 +37,7 @@ def prepare_full_model(base_model, params, freeze_base_model=True, freeze_till=N
     prediction = tf.keras.layers.Dense(params["CLASSES_COUNT"], activation="softmax")(flatten)
     model = tf.keras.models.Model(inputs=base_model.input, outputs=prediction)
 
-    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=params['LEARNING_RATE']), loss=params['LOSS'], metrics=params['METRICS'])
+    model.compile(optimizer='sgd', loss=params['LOSS'], metrics=params['METRICS'])
     logging.info("compilation of model is done")
     
     def __get_model_summary(model):
@@ -49,6 +50,7 @@ def prepare_full_model(base_model, params, freeze_base_model=True, freeze_till=N
 
     return model
 
-def load_model(model_path):
-    model = tf.keras.models.load_model(model_path)
+def load_model(model_path, config):
+    model = os.path.join(model_path, config['artifacts']['UPDATED_BASE_MODEL_NAME'])
+    model = tf.keras.models.load_model(model)
     return model

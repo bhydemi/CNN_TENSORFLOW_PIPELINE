@@ -40,3 +40,15 @@ stages:
     - artifacts/callbacks/tensorboard.pkl
     - artifacts/callbacks/model_checkpoint.h5
     - artifacts/callbacks/early_stopping.pkl
+  stage_04_train_model:
+    cmd: python src/stage_04_train_model.py --config_path=configs/config.yaml --params_path=params.yaml
+    deps:
+    - src/stage_04_train_model.py
+    - src/utils/common_utils.py
+    - configs/config.yaml
+    - src/stage_02_prepare_base_model.py
+    - src/stage_03_prepare_callback.py
+    - params.yaml
+    - src/stage_01_get_data.py
+    outs:
+    
